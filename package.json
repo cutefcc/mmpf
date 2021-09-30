@@ -1,0 +1,30 @@
+{
+  "name": "yideng",
+  "version": "1.0.0",
+  "description": "一款免费的性能监控SDK,我给他取名小石头",
+  "main": "dist/yideng.js",
+  "source": "src/yideng.ts",
+  "module": "dist/yideng.module.js",
+  "types": "dist/typings/index.d.ts",
+  "unpkg": "dist/yideng.umd.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "example:run": "parcel  examples/index.html",
+    "api:init": "api-extractor init",
+    "api:run": "api-extractor run --local --verbose",
+    "api:doc": "typedoc --out docs src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@microsoft/api-extractor": "^7.12.1",
+    "microbundle": "^0.13.0",
+    "typedoc": "^0.20.9"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "web-vitals": "^1.1.0"
+  }
+}
