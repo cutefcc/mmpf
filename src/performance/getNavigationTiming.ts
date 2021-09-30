@@ -1,13 +1,13 @@
 import { WP } from '../data/constants';
 import { isPerformanceSupported } from '../helpers/isSupported';
-import { IYidengNavigationTiming } from '../typings/types';
+import { IMmpfNavigationTiming } from '../typings/types';
 
 /**
  * Navigation Timing API provides performance metrics for HTML documents.
  * w3c.github.io/navigation-timing/
  * developers.google.com/web/fundamentals/performance/navigation-and-resource-timing
  */
-export const getNavigationTiming = (): IYidengNavigationTiming => {
+export const getNavigationTiming = (): IMmpfNavigationTiming => {
   if (!isPerformanceSupported()) {
     return {};
   }

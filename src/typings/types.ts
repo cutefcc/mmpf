@@ -1,4 +1,4 @@
-export interface IYidengDataConsumption {
+export interface IMmpfDataConsumption {
   beacon: number;
   css: number;
   fetch: number;
@@ -8,7 +8,7 @@ export interface IYidengDataConsumption {
   total: number;
   xmlhttprequest: number;
 }
-export interface IYidengNavigationTiming {
+export interface IMmpfNavigationTiming {
   fetchTime?: number;
   workerTime?: number;
   totalTime?: number;
@@ -29,17 +29,17 @@ export type EffectiveConnectionType =
   | '5g'
   | 'slow-2g'
   | 'lte';
-export interface IYidengNetworkInformation {
+export interface IMmpfNetworkInformation {
   downlink?: number;
   effectiveType?: EffectiveConnectionType;
   onchange?: () => void;
   rtt?: number;
   saveData?: boolean;
 }
-export type IYidengData =
+export type IMmpfData =
   | number
-  | IYidengNavigationTiming
-  | IYidengNetworkInformation;
+  | IMmpfNavigationTiming
+  | IMmpfNetworkInformation;
 
 export interface INavigatorInfo {
   deviceMemory?: number;
@@ -52,12 +52,12 @@ export type IVitalsScore = 'good' | 'needsImprovement' | 'poor' | null;
 
 export interface IAnalyticsTrackerOptions {
   metricName: string;
-  data: IYidengData;
+  data: IMmpfData;
   eventProperties: object;
   navigatorInformation: INavigatorInfo;
   vitalsScore: IVitalsScore;
 }
-export interface IYidengOptions {
+export interface IMmpfOptions {
   // Metrics
   captureError?: boolean;
   resourceTiming?: boolean;
@@ -80,7 +80,7 @@ export interface IReportData {
  * @interface 系统配置接口
  * @public
  */
-export interface IYidengConfig {
+export interface IMmpfConfig {
   reportData: IReportData;
   isResourceTiming: boolean;
   isElementTiming: boolean;

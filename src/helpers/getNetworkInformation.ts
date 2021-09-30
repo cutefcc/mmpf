@@ -1,13 +1,13 @@
 import { WN } from '../data/constants';
 import {
   EffectiveConnectionType,
-  IYidengNetworkInformation,
+  IMmpfNetworkInformation,
 } from '../typings/types';
 
 export let et: EffectiveConnectionType = '4g';
 export let sd = false;
 
-export const getNetworkInformation = (): IYidengNetworkInformation => {
+export const getNetworkInformation = (): IMmpfNetworkInformation => {
   if ('connection' in WN) {
     const dataConnection = (WN as any).connection;
     if (typeof dataConnection !== 'object') {

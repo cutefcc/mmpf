@@ -15,7 +15,7 @@ import {
   initPerformanceObserver,
 } from './performance/observe';
 import { isPerformanceSupported } from './tools/isSupported';
-import { IReportData, IYidengOptions } from './typings/types';
+import { IReportData, IMmpfOptions } from './typings/types';
 import ErrorTrace from './error';
 import analyticsTracker from './data/analyticsTracker';
 import ReportData from './data/reportData';
@@ -23,10 +23,10 @@ import { didVisibilityChange } from './helpers/onVisibilityChange';
 import { getNetworkInformation } from './helpers/getNetworkInformation';
 import { reportStorageEstimate } from './data/storageEstimate';
 
-export default class Yideng {
+export default class Mmpf {
   private v = '1.0.0';
   private reportData: IReportData;
-  constructor(options: IYidengOptions = {}) {
+  constructor(options: IMmpfOptions = {}) {
     // 扩展基础配置
     const logUrl = options.logUrl;
     if (!logUrl) {

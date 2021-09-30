@@ -1,12 +1,12 @@
 {
-  "name": "yideng",
+  "name": "mmpf",
   "version": "1.0.0",
   "description": "一款免费的性能监控SDK,我给他取名小石头",
-  "main": "dist/yideng.js",
-  "source": "src/yideng.ts",
-  "module": "dist/yideng.module.js",
+  "main": "dist/mmpf.js",
+  "source": "src/mmpf.ts",
+  "module": "dist/mmpf.module.js",
   "types": "dist/typings/index.d.ts",
-  "unpkg": "dist/yideng.umd.js",
+  "unpkg": "dist/mmpf.umd.js",
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",

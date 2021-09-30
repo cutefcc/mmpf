@@ -1,4 +1,4 @@
-import { IMetricMap, IYidengDataConsumption } from '../typings/types';
+import { IMetricMap, IMmpfDataConsumption } from '../typings/types';
 
 export const metrics: IMetricMap = {};
 export const cls = {
@@ -12,7 +12,7 @@ export const lcp = {
 };
 export const fpEntryName = 'first-paint';
 export const fcpEntryName = 'first-contentful-paint';
-export const rt: { value: IYidengDataConsumption } = {
+export const rt: { value: IMmpfDataConsumption } = {
   value: {
     beacon: 0,
     css: 0,
