@@ -35,18 +35,18 @@ export const getNavigationTiming = (): IMmpfNavigationTiming => {
     // Time to First Byte (TTFB)
     ttfb: responseStart - n.requestStart,
     // HTTP header size
-    headerSize: n.transferSize - n.encodedBodySize || 0,
+    headerSize: n.transferSize - (n.encodedBodySize || 0),
     //DNS解析时间
     dnsLookupTime: n.domainLookupEnd - n.domainLookupStart,
     //TCP建立时间
-    tcpTime: n.connectEnd - n.connectStart || 0,
+    tcpTime: n.connectEnd - (n.connectStart || 0),
     // 白屏时间
-    whiteTime: n.responseStart - n.navigationStart || 0,
+    whiteTime: n.responseStart - (n.navigationStart || 0),
     //dom渲染完成时间
-    domreadyTime: n.domContentLoadedEventEnd - n.navigationStart || 0,
+    domreadyTime: n.domContentLoadedEventEnd - (n.navigationStart || 0),
     //页面onload时间
-    loadTime: n.loadEventEnd - n.navigationStart || 0,
+    loadTime: n.loadEventEnd - (n.navigationStart || 0),
     //页面解析dom耗时
-    parseDomTime: n.domComplete - n.domInteractive || 0,
+    parseDomTime: n.domComplete - (n.domInteractive || 0),
   };
 };
