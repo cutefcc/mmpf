@@ -54,7 +54,7 @@ export interface IAnalyticsTrackerOptions {
   metricName: string;
   data: IMmpfData;
   eventProperties: object;
-  navigatorInformation: INavigatorInfo;
+  navigatorInformation?: INavigatorInfo;
   vitalsScore: IVitalsScore;
 }
 export interface IMmpfOptions {

@@ -19,6 +19,7 @@ import ReportData from './data/reportData';
 import { didVisibilityChange } from './helpers/onVisibilityChange';
 import { getNetworkInformation } from './helpers/getNetworkInformation';
 import { reportStorageEstimate } from './data/storageEstimate';
+import { getNavigatorInfo } from './helpers/getNavigatorInfo';
 
 export default class Mmpf {
   private v = '1.0.0';
@@ -68,13 +69,14 @@ export default class Mmpf {
         didVisibilityChange.bind(this, disconnectPerfObserversHidden)
       );
     }
-    // 记录系统DNS请求+白屏等时间
+    // 记录系统DNS tcp dom解析 白屏等时间
     logData('navigationTiming', getNavigationTiming());
     // 记录用户的网速 H5+多普勒测速
     logData('networkInformation', getNetworkInformation());
-    // 离线缓存数据
+    // 记录离线缓存数据
     if (WN && WN.storage && typeof WN.storage.estimate === 'function') {
       WN.storage.estimate().then(reportStorageEstimate);
     }
+    logData('navigatorInformation', getNavigatorInfo())
   }
 }

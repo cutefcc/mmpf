@@ -1,5 +1,5 @@
 import { logData } from './log';
-import { convertToKB } from '../helpers/utils';
+import { convertToMB } from '../helpers/utils';
 
 /**
  * The estimate() method of the StorageManager interface asks the Storage Manager
@@ -10,10 +10,10 @@ export const reportStorageEstimate = (storageInfo: StorageEstimate) => {
   const estimateUsageDetails =
     'usageDetails' in storageInfo ? (storageInfo as any).usageDetails : {};
   logData('storageEstimate', {
-    quota: convertToKB((storageInfo as any).quota),
-    usage: convertToKB((storageInfo as any).usage),
-    // caches: convertToKB(estimateUsageDetails.caches),
-    indexedDB: convertToKB(estimateUsageDetails.indexedDB),
-    // serviceWorker: convertToKB(estimateUsageDetails.serviceWorkerRegistrations),
+    quota: convertToMB((storageInfo as any).quota),
+    usage: convertToMB((storageInfo as any).usage),
+    // caches: convertToMB(estimateUsageDetails.caches),
+    indexedDB: convertToMB(estimateUsageDetails.indexedDB),
+    // serviceWorker: convertToMB(estimateUsageDetails.serviceWorkerRegistrations),
   });
 };

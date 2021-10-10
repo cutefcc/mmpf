@@ -13,7 +13,6 @@ export const reportPerf = function (
   customProperties?: object
 ): void {
   pushTask(() => {
-    //console.log('[ measureName ]', measureName);
     // 当页面被隐藏的时候不报告具体数据
     if (
       (visibility.isHidden && measureName.indexOf('Final') < 0) ||
@@ -26,7 +25,7 @@ export const reportPerf = function (
       metricName: measureName,
       data,
       eventProperties: customProperties || {},
-      navigatorInformation: getNavigatorInfo(),
+      // navigatorInformation: getNavigatorInfo(),
       vitalsScore: getVitalsScore(measureName, data),
     });
   });

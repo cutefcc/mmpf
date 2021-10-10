@@ -7,7 +7,6 @@ export const logData = (
   metric: any,
   customProperties?: object
 ): void => {
-  console.log(measureName, metric)
   Object.keys(metric).forEach((key) => {
     if (typeof metric[key] === 'number') {
       metric[key] = roundByTwo(metric[key]);

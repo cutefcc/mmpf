@@ -4,7 +4,7 @@ export const roundByTwo = (num: number) => {
   return parseFloat(num.toFixed(2));
 };
 
-export const convertToKB = (bytes: number): number | null => {
+export const convertToMB = (bytes: number): number | null => {
   if (typeof bytes !== 'number') {
     return null;
   }
