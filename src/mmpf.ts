@@ -72,11 +72,11 @@ export default class Mmpf {
     // 记录系统DNS tcp dom解析 白屏等时间
     logData('navigationTiming', getNavigationTiming());
     // 记录用户的网速 H5+多普勒测速
-    logData('networkInformation', getNetworkInformation());
-    // 记录离线缓存数据
-    if (WN && WN.storage && typeof WN.storage.estimate === 'function') {
-      WN.storage.estimate().then(reportStorageEstimate);
-    }
-    logData('navigatorInformation', getNavigatorInfo())
+    // logData('networkInformation', getNetworkInformation());
+    // // 记录离线缓存数据
+    // if (WN && WN.storage && typeof WN.storage.estimate === 'function') {
+    //   WN.storage.estimate().then(reportStorageEstimate);
+    // }
+    // logData('navigatorInformation', getNavigatorInfo())
   }
 }

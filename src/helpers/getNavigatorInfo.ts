@@ -18,13 +18,14 @@ export const getNavigatorInfo = function (): INavigatorInfo {
       deviceMemory: getDM() || 0,
       hardwareConcurrency: getHC() || 0,
       serviceWorkerStatus:
+        // 非空断言操作符（non-null assertion operator），和?.相反，这个符号表示对象后面的属性一定不是null或undefined
         'serviceWorker' in WN
           ? WN.serviceWorker!.controller
             ? 'controlled'
             : 'supported'
           : 'unsupported',
-      isLowEndDevice: getIsLowEndDevice(),
-      isLowEndExperience: getIsLowEndExperience(et, sd),
+      // isLowEndDevice: getIsLowEndDevice(),
+      // isLowEndExperience: getIsLowEndExperience(et, sd),
     };
   }
   return {};

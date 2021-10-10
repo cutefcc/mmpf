@@ -33,7 +33,7 @@ export const getNavigationTiming = (): IMmpfNavigationTiming => {
     // Response time only (download)
     downloadTime: responseEnd - responseStart,
     // Time to First Byte (TTFB)
-    timeToFirstByte: responseStart - n.requestStart,
+    ttfb: responseStart - n.requestStart,
     // HTTP header size
     headerSize: n.transferSize - n.encodedBodySize || 0,
     //DNS解析时间
@@ -43,7 +43,7 @@ export const getNavigationTiming = (): IMmpfNavigationTiming => {
     // 白屏时间
     whiteTime: n.responseStart - n.navigationStart || 0,
     //dom渲染完成时间
-    domTime: n.domContentLoadedEventEnd - n.navigationStart || 0,
+    domreadyTime: n.domContentLoadedEventEnd - n.navigationStart || 0,
     //页面onload时间
     loadTime: n.loadEventEnd - n.navigationStart || 0,
     //页面解析dom耗时

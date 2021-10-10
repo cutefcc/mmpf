@@ -14,21 +14,21 @@ import { initResourceTiming } from './resourceTiming';
 export const initPerformanceObserver = (): void => {
   console.log('🚀-----性能收集开始-----🚀', Math.random());
   // fp & fcp
-  perfObservers[0] = po('paint', initFirstPaint);
+  // perfObservers[0] = po('paint', initFirstPaint);
   // fid
-  perfObservers[1] = po('first-input', initFirstInputDelay);
+  // perfObservers[1] = po('first-input', initFirstInputDelay);
   // lcp
-  perfObservers[2] = po('largest-contentful-paint', initLargestContentfulPaint);
+  // perfObservers[2] = po('largest-contentful-paint', initLargestContentfulPaint);
   // 收集页面全部资源的性能数据
   // if (config.isResourceTiming) {
   //   console.log('🚀-----ResourceTiming 的性能数据收集开始-----🚀');
   //   po('resource', initResourceTiming);
   // }
   // cls
-  perfObservers[3] = po('layout-shift', initLayoutShift);
-  if (config.isElementTiming) {
-    po('element', initElementTiming);
-  }
+  // perfObservers[3] = po('layout-shift', initLayoutShift);
+  // if (config.isElementTiming) {
+  //   po('element', initElementTiming);
+  // }
 };
 
 export const disconnectPerfObserversHidden = (): void => {

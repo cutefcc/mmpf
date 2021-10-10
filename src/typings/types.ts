@@ -13,12 +13,12 @@ export interface IMmpfNavigationTiming {
   workerTime?: number;
   totalTime?: number;
   downloadTime?: number;
-  timeToFirstByte?: number;
+  ttfb?: number;
   headerSize?: number;
   dnsLookupTime?: number;
   tcpTime?: number;
   whiteTime?: number;
-  domTime?: number;
+  domreadyTime?: number;
   loadTime?: number;
   parseDomTime?: number;
 }
