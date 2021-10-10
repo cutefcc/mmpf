@@ -4,4 +4,5 @@ dist
 examples
 backup
 tests
+typings
 .cache
