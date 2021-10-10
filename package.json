@@ -1,7 +1,7 @@
 {
   "name": "mmpf",
   "version": "1.0.0",
-  "description": "一款免费的性能监控SDK,我给他取名小石头",
+  "description": "脉脉性能监控SDK：maimai performance",
   "main": "dist/mmpf.js",
   "source": "src/mmpf.ts",
   "module": "dist/mmpf.module.js",

@@ -12,8 +12,8 @@ export const reportStorageEstimate = (storageInfo: StorageEstimate) => {
   logData('storageEstimate', {
     quota: convertToKB((storageInfo as any).quota),
     usage: convertToKB((storageInfo as any).usage),
-    caches: convertToKB(estimateUsageDetails.caches),
+    // caches: convertToKB(estimateUsageDetails.caches),
     indexedDB: convertToKB(estimateUsageDetails.indexedDB),
-    serviceWorker: convertToKB(estimateUsageDetails.serviceWorkerRegistrations),
+    // serviceWorker: convertToKB(estimateUsageDetails.serviceWorkerRegistrations),
   });
 };
