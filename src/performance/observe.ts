@@ -12,7 +12,6 @@ import {
 import { po, poDisconnect } from './performanceObserver';
 import { initResourceTiming } from './resourceTiming';
 export const initPerformanceObserver = (): void => {
-  console.log('🚀-----性能收集开始-----🚀', Math.random());
   // fp & fcp
   // perfObservers[0] = po('paint', initFirstPaint);
   // fid
