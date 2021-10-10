@@ -10,7 +10,7 @@
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
-    "example:run": "parcel  examples/index.html",
+    "example:run": "parcel examples/index.html",
     "api:init": "api-extractor init",
     "api:run": "api-extractor run --local --verbose",
     "api:doc": "typedoc --out docs src"

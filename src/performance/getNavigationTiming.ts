@@ -23,7 +23,7 @@ export const getNavigationTiming = (): IMmpfNavigationTiming => {
   const responseEnd = n.responseEnd;
   // We cache the navigation time for future times
   return {
-    // fetchStart marks when the browser starts to fetch a resource
+    // fetchStart marks when the browser starts to fetch a resource  浏览器准备好使用 HTTP 请求抓取文档的时间，这发生在检查本地缓存之前
     // responseEnd is when the last byte of the response arrives
     fetchTime: responseEnd - n.fetchStart,
     // Service worker time plus response time
