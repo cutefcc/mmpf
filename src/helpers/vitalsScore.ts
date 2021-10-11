@@ -1,7 +1,7 @@
 import { IMmpfData, IVitalsScore } from '../typings/types';
 
 //https://web.dev/vitals/
-const fcpScore = [1000, 2500];
+const fcpScore = [1800, 3000];
 const lcpScore = [2500, 4000];
 const fidcore = [100, 300];
 const clsScore = [0.1, 0.25];

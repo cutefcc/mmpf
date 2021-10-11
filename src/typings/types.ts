@@ -53,7 +53,7 @@ export type IVitalsScore = 'good' | 'needsImprovement' | 'poor' | null;
 export interface IAnalyticsTrackerOptions {
   metricName: string;
   data: IMmpfData;
-  eventProperties: object;
+  eventProperties?: object;
   navigatorInformation?: INavigatorInfo;
   vitalsScore: IVitalsScore;
 }

@@ -12,19 +12,19 @@ import {
 import { po, poDisconnect } from './performanceObserver';
 import { initResourceTiming } from './resourceTiming';
 export const initPerformanceObserver = (): void => {
-  // fp & fcp
-  // perfObservers[0] = po('paint', initFirstPaint);
+  // fp & fcp & tbt（perfObservers[4]）
+  perfObservers[0] = po('paint', initFirstPaint);
   // fid
-  // perfObservers[1] = po('first-input', initFirstInputDelay);
+  perfObservers[1] = po('first-input', initFirstInputDelay);
   // lcp
-  // perfObservers[2] = po('largest-contentful-paint', initLargestContentfulPaint);
+  perfObservers[2] = po('largest-contentful-paint', initLargestContentfulPaint);
   // 收集页面全部资源的性能数据
   // if (config.isResourceTiming) {
-  //   console.log('🚀-----ResourceTiming 的性能数据收集开始-----🚀');
   //   po('resource', initResourceTiming);
   // }
   // cls
-  // perfObservers[3] = po('layout-shift', initLayoutShift);
+  perfObservers[3] = po('layout-shift', initLayoutShift);
+  // 某一个元素开始绘制的时间，需要侵入代码 比如：<div id="app" elementtiming="elPageTitle">Hello</div>
   // if (config.isElementTiming) {
   //   po('element', initElementTiming);
   // }

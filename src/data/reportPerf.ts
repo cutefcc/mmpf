@@ -24,7 +24,7 @@ export const reportPerf = function (
     config.analyticsTracker({
       metricName: measureName,
       data,
-      eventProperties: customProperties || {},
+      // eventProperties: customProperties || {},
       // navigatorInformation: getNavigatorInfo(),
       vitalsScore: getVitalsScore(measureName, data),
     });
