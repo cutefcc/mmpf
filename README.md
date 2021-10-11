@@ -3,4 +3,4 @@
 2. yarn run api:doc
 3. yarn run api:run
 4. cd dist 
-5. npm publish
+5. npm publish --access=public

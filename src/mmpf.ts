@@ -71,7 +71,9 @@ export default class Mmpf {
     }
 
     W.addEventListener('load', () => {
+      console.log('page is fully loaded');
       setTimeout(() => {
+        console.log('---navigationTiming---start');
         // 记录系统DNS tcp dom解析 白屏等时间
         logData('navigationTiming', getNavigationTiming());
         // 记录用户的网速 H5+多普勒测速
