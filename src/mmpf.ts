@@ -23,20 +23,20 @@ import { getNavigatorInfo } from './helpers/getNavigatorInfo';
 
 export default class Mmpf {
   private v = '1.0.0';
-  private reportData: IReportData;
+  // private reportData: IReportData;
   constructor(options: IMmpfOptions = {}) {
     // 扩展基础配置
-    const logUrl = options.logUrl;
-    if (!logUrl) {
-      throw new Error(`监控平台${this.v}提示未传递logUrl`);
-    }
-    //向后台输送数据
-    const insReportData = new ReportData({
-      logUrl,
-    });
-    config.reportData = insReportData;
-    //对外暴露上传接口
-    this.reportData = insReportData;
+    // const logUrl = options.logUrl;
+    // if (!logUrl) {
+    //   throw new Error(`监控平台${this.v}提示未传递logUrl`);
+    // }
+    // //向后台输送数据
+    // const insReportData = new ReportData({
+    //   logUrl,
+    // });
+    // config.reportData = insReportData;
+    // //对外暴露上传接口
+    // this.reportData = insReportData;
     //集合数据汇总
     const _analyticsTracker = options.analyticsTracker;
     if (_analyticsTracker) {
@@ -69,18 +69,18 @@ export default class Mmpf {
         didVisibilityChange.bind(this, disconnectPerfObserversHidden)
       );
     }
-    W.addEventListener('load', () => {
-      setTimeout(() => {
-        // 记录系统DNS tcp dom解析 白屏等时间
-        logData('navigationTiming', getNavigationTiming());
-        // 记录用户的网速 H5+多普勒测速
-        // logData('networkInformation', getNetworkInformation());
-        // // 记录离线缓存数据
-        // if (WN && WN.storage && typeof WN.storage.estimate === 'function') {
-        //   WN.storage.estimate().then(reportStorageEstimate);
-        // }
-        // logData('navigatorInformation', getNavigatorInfo())
-      }, 500)
-    })
+    // W.addEventListener('load', () => {
+    // setTimeout(() => {
+    // 记录系统DNS tcp dom解析 白屏等时间
+    // logData('navigationTiming', getNavigationTiming());
+    // 记录用户的网速 H5+多普勒测速
+    // logData('networkInformation', getNetworkInformation());
+    // // 记录离线缓存数据
+    // if (WN && WN.storage && typeof WN.storage.estimate === 'function') {
+    //   WN.storage.estimate().then(reportStorageEstimate);
+    // }
+    // logData('navigatorInformation', getNavigatorInfo())
+    // }, 500)
+    // })
   }
 }
