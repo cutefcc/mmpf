@@ -14,7 +14,7 @@
     "api:init": "api-extractor init",
     "api:run": "api-extractor run --local --verbose",
     "api:doc": "typedoc --out docs src",
-    "buildAll": "yarn build && yarn run api:doc && yarn run api:run",
+    "buildAll": "yarn build && yarn run api:doc && yarn run api:run"
   },
   "keywords": [],
   "author": "",
